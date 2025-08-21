@@ -9,7 +9,7 @@ interface ReasonCodeModalProps {
   options: string[]
 }
 
-export function ReasonCodeModal({ isOpen, onClose, onSelectReason, status, prompt, options }: ReasonCodeModalProps) {
+export function ReasonCodeModal({ isOpen, onClose, onSelectReason, prompt, options }: ReasonCodeModalProps) {
   if (!isOpen) return null
 
   return (

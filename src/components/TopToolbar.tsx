@@ -10,7 +10,6 @@ import {
   Bell, 
   CheckCircle, 
   X,
-  Clock
 } from 'lucide-react'
 import { toast } from 'sonner'
 
@@ -38,7 +37,6 @@ export function TopToolbar({
   notifications, 
   onAcceptAssignment, 
   onDeclineAssignment, 
-  onMarkAsRead 
 }: TopToolbarProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false)
