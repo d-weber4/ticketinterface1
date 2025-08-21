@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 /* 
 replace version specifiers with just the package name
-import { Slot } from "@radix-ui/react-slot@1.1.2";
+import { Slot } from "@radix-ui/react-slot";
 to
 import { Slot } from "@radix-ui/react-slot";
 */
