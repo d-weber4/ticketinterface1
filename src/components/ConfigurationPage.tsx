@@ -7,7 +7,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Badge } from './ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs'
 import { Label } from './ui/label'
-import { Textarea } from './ui/textarea'
 import { DndProvider, useDrag, useDrop } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
 import { 
@@ -23,7 +22,7 @@ import {
   GripVertical,
   Trash2
 } from 'lucide-react'
-import { toast } from 'sonner@2.0.3'
+import { toast } from 'sonner'
 
 interface Technician {
   id: string
@@ -199,9 +198,13 @@ function DraggableItem({
     },
   })
 
+
+
   return (
     <div
-      ref={(node) => drag(drop(node))}
+      ref={(node) => {
+        drag(drop(node))
+      }}
       className={`flex items-center gap-3 p-3 border rounded-lg cursor-move transition-all ${
         isDragging ? 'opacity-50' : ''
       } ${item.enabled ? 'bg-white' : 'bg-muted/30'}`}

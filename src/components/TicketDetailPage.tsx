@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card'
+import { Card, CardContent,  CardHeader, CardTitle } from './ui/card'
 import { Button } from './ui/button'
 import { Badge } from './ui/badge'
 import { Input } from './ui/input'
@@ -11,19 +11,14 @@ import { ReasonCodeModal } from './ReasonCodeModal'
 import { requiresReasonCode, getReasonCodeConfig } from './reasonCodes'
 import { 
   ArrowLeft, 
-  Clock, 
-  User, 
-  Calendar,
-  AlertTriangle,
   Phone,
   Mail,
   Building,
   Edit,
   Send,
   Paperclip,
-  MoreVertical
 } from 'lucide-react'
-import { toast } from 'sonner@2.0.3'
+import { toast } from 'sonner'
 
 interface TicketDetailPageProps {
   ticketId: string | null
@@ -123,7 +118,7 @@ const mockTicketData: TicketDetail = {
 const statuses = ['New', 'In Progress', 'Assigned', 'Approval/Info Needed', 'Resolved', 'Awaiting Response', 'Scheduled', 'Closed']
 const priorities = ['Low', 'Medium', 'High', 'Critical']
 
-export function TicketDetailPage({ ticketId, onBack }: TicketDetailPageProps) {
+export function TicketDetailPage({  onBack }: TicketDetailPageProps) {
   const [ticket, setTicket] = useState(mockTicketData)
   const [newComment, setNewComment] = useState('')
   const [editingField, setEditingField] = useState<string | null>(null)
@@ -406,7 +401,7 @@ export function TicketDetailPage({ ticketId, onBack }: TicketDetailPageProps) {
                 </div>
               )}
 
-              {ticket.comments.map((comment, index) => (
+              {ticket.comments.map((comment) => (
                 <div key={comment.id} className="flex gap-3 p-4 border rounded-lg">
                   <Avatar className="w-8 h-8">
                     <AvatarImage src={comment.avatar} />

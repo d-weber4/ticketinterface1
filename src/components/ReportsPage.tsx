@@ -3,12 +3,10 @@ import { Button } from './ui/button'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select'
 import { Badge } from './ui/badge'
 import { 
-  BarChart3, 
   TrendingUp, 
   Clock, 
   AlertTriangle,
   Download,
-  Calendar,
   Users,
   CheckCircle
 } from 'lucide-react'

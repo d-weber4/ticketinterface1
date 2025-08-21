@@ -1,8 +1,6 @@
 import { Button } from './ui/button'
 import { 
   LayoutDashboard, 
-  FileText, 
-  Settings, 
   BarChart3,
   Ticket,
   Route,

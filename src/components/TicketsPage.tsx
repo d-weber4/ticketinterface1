@@ -27,7 +27,7 @@ import {
   Check,
   X
 } from 'lucide-react'
-import { toast } from 'sonner@2.0.3'
+import { toast } from 'sonner'
 
 interface Ticket {
   id: string
@@ -201,7 +201,8 @@ export function TicketsPage({ isAvailable, onAvailabilityChange, onViewTicket }:
     })
   }
 
-  const startEditing = (ticketId: string, field: EditingCell['field'], currentValue: string) => {
+  type EditingField = 'title' | 'priority' | 'status' | 'assignee' | 'dueDate';
+  const startEditing = (ticketId: string, field: EditingField, currentValue: string) => {
     setEditingCell({ ticketId, field })
     setEditingValue(currentValue)
   }
@@ -402,7 +403,7 @@ export function TicketsPage({ isAvailable, onAvailabilityChange, onViewTicket }:
     }
   }
 
-  const renderEditableCell = (ticket: Ticket, field: EditingCell['field'], currentValue: string, displayValue: React.ReactNode) => {
+  const renderEditableCell = (ticket: Ticket, field: 'title' | 'priority' | 'status' | 'assignee' | 'dueDate', currentValue: string, displayValue: React.ReactNode) => {
     const cellKey = `${ticket.id}-${field}`
     const isSelectOpen = openSelectCell === cellKey
 

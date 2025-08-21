@@ -5,10 +5,8 @@ import { Badge } from './ui/badge'
 import { Input } from './ui/input'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select'
 import { Label } from './ui/label'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion'
 import { 
   Calendar,
-  Clock,
   Phone,
   FileText,
   Edit,
@@ -18,7 +16,7 @@ import {
   ChevronDown,
   ChevronUp
 } from 'lucide-react'
-import { toast } from 'sonner@2.0.3'
+import { toast } from 'sonner'
 
 interface Schedule {
   id: string
