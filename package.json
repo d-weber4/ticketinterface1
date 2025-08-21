@@ -2,8 +2,8 @@
   "name": "figma-make-local-runner",
   "version": "0.0.0",
   "engines": {
-  "node": "18.x"
-}
+    "node": "18.x"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
